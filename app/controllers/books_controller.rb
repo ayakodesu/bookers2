@@ -11,6 +11,10 @@ def create
   redirect_to book_path
 end
 
+def index
+  @books = Book.new
+end
+
 
 private
 
