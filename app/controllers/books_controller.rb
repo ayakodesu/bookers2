@@ -13,6 +13,7 @@ end
 
 def index
   @books = Book.new
+  @user = current_user
 end
 
 
