@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/homes/about" => "homes#about", as: "about"
   get 'books/new'
   post 'books' => 'books#create'
-
+  get 'books' => 'books#index'
+  get 'users/:id/edit' => 'users#edit', as: 'user_book'
 
 end
