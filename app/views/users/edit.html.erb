@@ -1,1 +1,14 @@
 <h1>edit</h1>
+<%= form_with model: @user do |f| %>
+
+
+
+  <h5>Name</h5>
+  <%= f.text_field :name %>
+  <h5>Image</h5>
+  <%= f.file_field :profile_image, accept: "image/*" %>
+
+  <h5>Introduction</h5>
+  <%= f.text_area :introduction %>
+<%= f.submit "送信" %>
+<% end %>
