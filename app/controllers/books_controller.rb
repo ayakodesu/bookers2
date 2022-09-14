@@ -15,13 +15,18 @@ def index
   @books = Book.new
   @user = current_user
   @books = Book.all
+  @book = current_user
+end
+
+def show
+  @book = Book.find(params[:id])
 end
 
 
 private
 
   def book_params
-    params.require(:book).permit(:shop_name, :image, :caption)
+    params.require(:book).permit(:title, :body)
   end
 
 end
