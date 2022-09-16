@@ -40,6 +40,10 @@ def destroy
   redirect_to '/users/sign_in'
 end
 
+def edit
+  @book = Book.find(params[:id])
+end
+
 
 private
   def book_params
