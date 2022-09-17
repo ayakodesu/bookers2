@@ -9,7 +9,7 @@ def create
   @book.user_id = current_user.id
 if @book.save
   flash[:notice] = "Signed in successfully."
-  redirect_to book_path(@book)
+  redirect_to book_path(@book.id)
 else
   @books = Book.all
   @user = current_user
@@ -31,10 +31,15 @@ end
 
 def update
   @book = Book.find(params[:id])
-  @book.update(book_params)
-  @book.save
-  redirect_to book_path(@book)
+  if @book.update(book_params)
+    flash[:notice] = "You have updated book successfully."
+  redirect_to book_path(@book.id)
+  else
+    @books = Book.all
+    render :edit
+  end
 end
+
 
 def destroy
   @book = Book.find(params[:id])
