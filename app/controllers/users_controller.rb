@@ -19,10 +19,10 @@ def update
 end
 
 def create
-  @user = User.new(book_params)
+  @user = User.new(user_params)
   @user.user_id = current_user.id
 if @user.save
-  redirect_to book_path(@user)
+  redirect_to user_path(@user)
 else
   @users = User.all
   @user = current_user
@@ -34,9 +34,10 @@ end
 
 def index
     @users = User.all
-
+    @user = User.new
     @user = current_user
     @book = Book.find(params[:id])
+    @user = User.find(params[:id])
 
 end
 
