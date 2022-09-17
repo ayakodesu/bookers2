@@ -1,3 +1,11 @@
+<main>
+  <p id="notice"></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-ig-5 px-5 px-sm-0 mx-auto">
+
+
+
 
 
 
@@ -5,11 +13,23 @@
 
 <h1>Editing Book</h1>
 
+<div class="form-group">
   <h5>Title</h5>
   <%= f.text_field :title %>
 
-
+<div class="form-group">
   <h5>Opinion</h5>
   <%= f.text_area :body %>
-<%= f.submit "Update Book" %>
+
+<div class="form-group">
+<%= f.submit "Update Book", class: "btn btn-success" %>
 <% end %>
+
+</div>
+</form>
+<%= link_to "show",book_path(@book.id) %> |
+<%= link_to "Back",books_path %>
+
+</div>
+</div>
+</main>
