@@ -32,6 +32,7 @@ end
 def update
   @book = Book.find(params[:id])
   @book.update(book_params)
+  @book.save
   redirect_to book_path(@book)
 end
 
