@@ -18,6 +18,7 @@ def update
   redirect_to user_path(@user)
 end
 
+
 def create
   @user = User.new(user_params)
   @user.user_id = current_user.id
