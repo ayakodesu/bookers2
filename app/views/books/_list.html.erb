@@ -5,18 +5,18 @@
         <h2>User info</h2>
   <table class="table">
   <tr>
- <th>
+
     <% if current_user.profile_image.attached? %>
   <%= image_tag current_user.profile_image, size: "100x100" %>
 <% else %>
   <%= image_tag 'no_image', size: "100x100" %>
 <% end %>
-</th>
-<table class="table">
-  <tbody>
+
+
+
   <th>name</th>
   <th><%= current_user.name %></th>
-  </tr>
+
   <tr>
   <th>introduction</th>
   <th><%= current_user.introduction %></th>
