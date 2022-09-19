@@ -2,7 +2,7 @@
 
 <html>
   <head>
-<%= flash[:notice] %>
+
     <title>Bookers2</title>
 
     <%= csrf_meta_tags %>
@@ -13,7 +13,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<main>
+
 <body>
   <header>
 
@@ -32,7 +32,7 @@
         <ul class="navbar-nav ml-auto">
 
 
-<%= flash[:notice] %>
+
 
 
 
@@ -63,7 +63,7 @@
     </div>
     </nav>
   </header>
-  </main>
+<%= flash[:notice] %>
   <%= yield %>
 
 
