@@ -28,7 +28,8 @@ end
 
 def show
   @book = Book.find(params[:id])
-  @user = current_user
+  @user = @book.user
+  @books = @user.books
 end
 
 def update
