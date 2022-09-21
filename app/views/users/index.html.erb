@@ -14,20 +14,20 @@
         <th colspan="3"></th>
       </tr>
       </thead>
-    <tbody>
-      <% @books.each do |book| %>
+  <tbody>
+    <% @users.each do |user| %>
       <tr>
     <td>
-    <% if book.user.profile_image.attached? %>
-    <%= image_tag book.user.profile_image, size: "100x100" %>
+    <% if user.profile_image.attached? %>
+    <%= image_tag user.profile_image, size: "100x100" %>
     <% else %>
     <%= image_tag 'no_image', size: "100x100" %>
     <% end %>
-        </td>
-        <td><%= book.user.name %></td>
-    <td><%= link_to "show", user_path(book.id) %></td>
-    <% end %>
 
+        </td>
+        <td><%= user.name %></td>
+    <td><%= link_to "show", user_path(user.id) %></td>
+    <% end %>
     </tbody>
 
 
