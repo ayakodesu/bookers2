@@ -19,16 +19,16 @@ end
 
 
 def index
+  @books = Book.all
   @book = Book.new
   @user = current_user
-  @books = Book.all
+
 
 end
 
 def show
   @book = Book.find(params[:id])
   @user = current_user
-
 end
 
 def update
