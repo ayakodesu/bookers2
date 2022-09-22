@@ -1,4 +1,4 @@
-<%= render 'books/list', books: @books %>
+<%= render 'books/list', user: @user %>
 
 
 <div class="col-md-8 offset-md-1">
@@ -26,7 +26,7 @@
 
         </td>
         <td><%= user.name %></td>
-    <td><%= link_to "show", user_path(user.id) %></td>
+    <td><%= link_to "show", user_path(@user.id) %></td>
     <% end %>
     </tbody>
 
