@@ -55,7 +55,7 @@ def edit
   if @book.user == current_user
     render "edit"
   else
-    redirect_to user_path
+    redirect_to books_path
   end
 end
 end
