@@ -14,13 +14,13 @@
   </head>
 
 
-    <body class="d-flex flex-column vh-100">
-    <header class="shadow-sm">
+<body class="d-flex flex-column vh-100">
+  <header class="shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
 
 
-          <%= link_to "Bookers", root_path, class: 'nav-link text-light' %>
+    <%= link_to "Bookers", root_path, class: 'nav-link text-light' %>
         </a>
         <button class="navbar-toggler" type="button" date-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,32 +35,32 @@
 
 
       <%= link_to user_path(current_user.id), class: 'nav-link text-light' do %>
-      <i class="fas fa-home"></i>
-      Home
-      </li>
+        <i class="fas fa-home"></i>
+        Home
+        </li>
       <% end %>
 
 
       <%= link_to users_path, class: 'nav-link text-light' do %>
-      <i class="fas fa-users"></i>
-      Users
-      </li>
+        <i class="fas fa-users"></i>
+        Users
+        </li>
       <% end %>
 
 
 
       <%= link_to books_path, class: 'nav-link text-light' do %>
-      <i class="fas fa-book-open"></i>
-      Books
-      </li>
+        <i class="fas fa-book-open"></i>
+        Books
+        </li>
       <% end %>
 
 
 
       <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
-      <i class="fas fa-sign-out-alt"></i>
-      Log out
-      </li>
+        <i class="fas fa-sign-out-alt"></i>
+        Log out
+        </li>
       <% end %>
 
 
@@ -69,41 +69,41 @@
 
 
       <%= link_to root_path, class: "nav-link text-light" do %>
-       <i class="fas fa-home"></i>
-       Home
-       </li>
+         <i class="fas fa-home"></i>
+         Home
+         </li>
       <% end %>
 
 
       <%= link_to about_path, class: 'nav-link text-light' do %>
-      <i class="fas fa-link"></i>
-      About
-      </li>
+        <i class="fas fa-link"></i>
+        About
+        </li>
       <% end %>
 
 
       <%= link_to new_user_registration_path, class: 'nav-link text-light' do %>
-      <i class="fas fa-user-plus"></i>
-      Sign up
-      </li>
+        <i class="fas fa-user-plus"></i>
+        Sign up
+        </li>
       <% end %>
 
 
       <%= link_to new_user_session_path, class: 'nav-link text-light' do %>
-      <i class="fas fa-sign-in-alt"></i>
-      Log in
-    </li>
-    <% end %>
+        <i class="fas fa-sign-in-alt"></i>
+        Log in
+        </li>
+      <% end %>
 
     <% end %>
 
-    </ul>
+      </ul>
     </div>
     </div>
     </nav>
   </header>
-<%= flash[:notice] %>
-  <%= yield %>
+    <%= flash[:notice] %>
+    <%= yield %>
 </main>
 
 <footer>
@@ -114,6 +114,6 @@
       </div>
     </div>
   </div>
-  </footer>
+</footer>
 </body>
 </html>

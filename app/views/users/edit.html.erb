@@ -20,21 +20,21 @@
 <% end %>
 
   <div class="form-group">
-  <h5>Name</h5>
-
-  <%= f.text_field :name %>
-
-  <div class="form-group">
-  <h5>Image</h5>
-  <%= f.file_field :profile_image, accept: "image/*" %>
-
+    <h5>Name</h5>
+    <%= f.text_field :name %>
 
   <div class="form-group">
-  <h5>Introduction</h5>
-  <%= f.text_area :introduction %>
+    <h5>Image</h5>
+    <%= f.file_field :profile_image, accept: "image/*" %>
+
 
   <div class="form-group">
-<%= f.submit "Update User", class: "btn btn-secondary" %>
-<% end %>
-</div>
-</form>
+    <h5>Introduction</h5>
+    <%= f.text_area :introduction %>
+
+  <div class="form-group">
+    <%= f.submit "Update User", class: "btn btn-secondary" %>
+    <% end %>
+  </div>
+  </form>
+</main>
